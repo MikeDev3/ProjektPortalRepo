@@ -1,119 +1,139 @@
 ﻿@model ProjectPortal.Models.IsAliveClass
-<h2>Index</h2>
 
 <head>
-
     <link rel="stylesheet" href="~/Content/Site.css"/>
 </head>
 
-<div>
-    <p>Länkar till alla Services: </p>
-    <table>
+<div class="container">
+    <br />
+    <h3>Länkar till olika admingränssnitt för - Finder</h3>
+    <table class="table">
         <tr>
-           <th>Service</th>
-            <th>Tillstånd på servicen</th>
-            <th>Länk till Admingränssnittet</th>
-        </tr>
-
-        <tr>
-
-            @if (Model.grupp1 == true)
-            {
-                <td><a href="http://193.10.202.76/LoginProject/LoginProject/LoginService.svc">Länk till Inloggningsservice</a></td>
-                <td> <img class="isonlinestyleimage" src="~/fonts/green.png" alt="Service is running."></td>
-                <td><a href="http://193.10.202.76/AdminPortal" alt="Länk till Admingränssnitt i Login gruppen">Grupp 1</a></td>
-            }
-
-            else
-            {
-
-                <td><a href="http://193.10.202.76/LoginProject/LoginProject/LoginService.svc">Länk till Inloggningsservice</a></td>
-                <td> <img class="isonlinestyleimage" src="~/fonts/circle-512 (1).png" alt="Service is not running, the service is offline."></td>
-                <td><a href="http://193.10.202.76/AdminPortal" alt="Länk till Admingränssnitt i Login gruppen">Grupp 1</a></td>
-
-            }
+            <th class="th">Länk</th>
+            <th class="th">Beskrivning</th>
         </tr>
         <tr>
-
-            @if (Model.grupp2 == true)
-            {
-                <td><a href="http://193.10.202.77/ReviewService/Service1.svc">Länk till Moderatorsservice</a></td>
-                <td><img class="isonlinestyleimage" src="~/fonts/green.png" alt="Service is running"></td>
-
-            }
-
-            else
-            {
-
-                <td>  <a href="http://193.10.202.77/ReviewService/Service1.svc">Länk till Moderatorsservice</a></td>
-                <td> <img class="isonlinestyleimage" src="~/fonts/circle-512 (1).png" alt="Service is not running, the service is offline."></td>
-
-            }
-        </tr> 
-
+            <td><a href="http://193.10.202.76/AdminPortal" alt="Länk till Admingränssnitt i Login gruppen">Admingränssnitt</a></td>
+            <td> <strong>Admingränssnitt -</strong> Kontohantering & Behörigheter</td>
+        </tr>
         <tr>
-
-            @if (Model.grupp3 == true)
-            {
-                <td> <a href="http://193.10.202.78/Annons/Service1.svc">Länk till Annonsservice</a></td>
-                <td> <img class="isonlinestyleimage" src="~/fonts/green.png" alt="Service is running"></td>
-
-            }
-
-            else
-            {
-
-                <td>   <a href="http://193.10.202.78/Annons/Service1.svc">Länk till Annonsservice</a></td>
-                <td> <img class="isonlinestyleimage" src="~/fonts/circle-512 (1).png" alt="Service is not running, the service is offline."></td>
-
-            }
+            <td> <a href="http://193.10.202.82/FinderMessageAdmin" alt="Länk till grupp 5 admin gränssnitt">Moderatoradmin</a> </td>
+            <td> <strong>Admingränssnitt - </strong> Hantera omdömen & Godkännanden</td>
+        </tr>
+        <tr>
+            <td> <a href="http://193.10.202.82/FinderMessageAdmin" alt="Länk till grupp 5 admin gränssnitt">Meddelandeadmin</a> </td>
+            <td> <strong>Admingränssnitt -</strong> Meddelandehantering & Servicekontrakt</td>
         </tr>
 
-        <tr>
-
-            @if (Model.grupp4 == true)
-            {
-                <td> <a href="http://193.10.202.81/UserProfileService/UserProfileService.svc">Länk till Användarservice</a></td>
-                <td> <img class="isonlinestyleimage" src="~/fonts/green.png" alt="Service is running"></td>
-
-            }
-
-            else
-            {
-
-                <td> <a href="http://193.10.202.81/UserProfileService/UserProfileService.svc">Länk till Användarservice</a></td>
-
-                <td> <img class="isonlinestyleimage" src="~/fonts/circle-512 (1).png" alt="Service is not running, the service is offline."></td>
-
-
-            }
-        </tr>
-
-        <tr>
-
-            @if (Model.grupp5 == true)
-            {
-                <td><a href="http://193.10.202.82/MessageService/service1.svc">Länk till Meddelandeservice</a></td>
-                <td> <img class="isonlinestyleimage" src="~/fonts/green.png" alt="Service is running"></td>
-                <td> <a href="http://193.10.202.82/FinderMessageAdmin" alt="Länk till grupp 5 admin gränssnitt">Grupp 5</a> </td>
-
-
-            }
-
-            else
-            {
-
-                <td> <a href="http://193.10.202.82/MessageService/service1.svc">Länk till Meddelandeservice</a></td>
-                <td> <img class="isonlinestyleimage" src="~/fonts/circle-512 (1).png" alt="Service is not running, the service is offline."></td>
-                <td> <a href="http://193.10.202.82/FinderMessageAdmin" alt="Länk till grupp 5 admin gränssnitt"> Grupp 5</a> </td>
-
-
-            }
-        </tr>
-       
+        <tr></tr>
 
     </table>
+    <br />
+    <h3>Länkar till alla aktiva services i Finder </h3>
+    <div>
+
+        <span style="font-weight: bold">Servicen är online = <img class="isonlinestyleimage2" src="~/fonts/green.png" alt="Service is running."> </span> <br /> <br />
+        <span style="font-weight: bold"> Servicen är offline = <img class="isonlinestyleimage2" src="~/fonts/circle-512 (1).png" alt="Service is not running, the service is offline."></span>
+        <br /> <br />
+        <table class="table">
+            <tr>
+                <th class="th">Service</th>
+                <th class="th">Tillstånd på servicen</th>
+            </tr>
+
+            <tr>
+
+                @if (Model.grupp1 == true)
+                {
+                    <td><a href="http://193.10.202.76/LoginProject/LoginProject/LoginService.svc">Länk till Inloggningsservice</a></td>
+                    <td> <img class="isonlinestyleimage" src="~/fonts/green.png" alt="Service is running."></td>
+                }
+
+                else
+                {
+
+                    <td><a href="http://193.10.202.76/LoginProject/LoginProject/LoginService.svc">Länk till Inloggningsservice</a></td>
+                    <td> <img class="isonlinestyleimage" src="~/fonts/circle-512 (1).png" alt="Service is not running, the service is offline."></td>
+
+                }
+            </tr>
+            <tr>
+
+                @if (Model.grupp2 == true)
+                {
+                    <td><a href="http://193.10.202.77/ReviewService/Service1.svc">Länk till Moderatorsservice</a></td>
+                    <td><img class="isonlinestyleimage" src="~/fonts/green.png" alt="Service is running"></td>
+
+                }
+
+                else
+                {
+
+                    <td>  <a href="http://193.10.202.77/ReviewService/Service1.svc">Länk till Moderatorsservice</a></td>
+                    <td> <img class="isonlinestyleimage" src="~/fonts/circle-512 (1).png" alt="Service is not running, the service is offline."></td>
+
+                }
+            </tr>
+
+            <tr>
+
+                @if (Model.grupp3 == true)
+                {
+                    <td> <a href="http://193.10.202.78/Annons/Service1.svc">Länk till Annonsservice</a></td>
+                    <td> <img class="isonlinestyleimage" src="~/fonts/green.png" alt="Service is running"></td>
+
+                }
+
+                else
+                {
+
+                    <td>   <a href="http://193.10.202.78/Annons/Service1.svc">Länk till Annonsservice</a></td>
+                    <td> <img class="isonlinestyleimage" src="~/fonts/circle-512 (1).png" alt="Service is not running, the service is offline."></td>
+
+                }
+            </tr>
+
+            <tr>
+
+                @if (Model.grupp4 == true)
+                {
+                    <td> <a href="http://193.10.202.81/UserProfileService/UserProfileService.svc">Länk till Användarservice</a></td>
+                    <td> <img class="isonlinestyleimage" src="~/fonts/green.png" alt="Service is running"></td>
+
+                }
+
+                else
+                {
+
+                    <td> <a href="http://193.10.202.81/UserProfileService/UserProfileService.svc">Länk till Användarservice</a></td>
+
+                    <td> <img class="isonlinestyleimage" src="~/fonts/circle-512 (1).png" alt="Service is not running, the service is offline."></td>
 
 
-</div>
+                }
+            </tr>
+
+            <tr>
+
+                @if (Model.grupp5 == true)
+                {
+                    <td><a href="http://193.10.202.82/MessageService/service1.svc">Länk till Meddelandeservice</a></td>
+                    <td> <img class="isonlinestyleimage" src="~/fonts/green.png" alt="Service is running"></td>
+                }
+
+                else
+                {
+
+                    <td> <a href="http://193.10.202.82/MessageService/service1.svc">Länk till Meddelandeservice</a></td>
+                    <td> <img class="isonlinestyleimage" src="~/fonts/circle-512 (1).png" alt="Service is not running, the service is offline."></td>
+
+                }
+            </tr>
+
+
+        </table>
+
+
+    </div>
+    </div>
 

@@ -24,31 +24,19 @@ namespace ProjectPortal.Controllers
             bool trueorfalse4 = false;
             bool trueorfalse5 = false;
 
-
-
             trueorfalse1 = grupp1.IsAlive();
-
-            /* dessa metoder finns ju inte ännu. (IsAlive) vi får be alla grupper skapa
-            en sån imorgon (kan ju bara kopiera vår och skicka till dem) */
-
-            
-           trueorfalse2 = grupp2.IsAlive();        
+            trueorfalse2 = grupp2.IsAlive();        
             trueorfalse3 = grupp3.IsAlive();
             trueorfalse4 = grupp4.IsAlive();
             trueorfalse5 = grupp5.IsAlive();
             
-    
-            aliveClass.grupp1 = trueorfalse1;
-            
+            aliveClass.grupp1 = trueorfalse1;     // Här tilldelas alla bool-variabler till objektet "aliveclass" som returneras till vyn
             aliveClass.grupp2 = trueorfalse2;
             aliveClass.grupp3 = trueorfalse3;
-           aliveClass.grupp4 = trueorfalse4;
+            aliveClass.grupp4 = trueorfalse4;
             aliveClass.grupp5 = trueorfalse5;
-            
-
-
-
             return View(aliveClass);
+            
         }
 
       
