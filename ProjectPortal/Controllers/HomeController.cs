@@ -34,7 +34,7 @@ namespace ProjectPortal.Controllers
             
            trueorfalse2 = grupp2.IsAlive();        
             trueorfalse3 = grupp3.IsAlive();
-            //trueorfalse4 = grupp4.IsAlive();
+            trueorfalse4 = grupp4.IsAlive();
             trueorfalse5 = grupp5.IsAlive();
             
     
@@ -42,7 +42,7 @@ namespace ProjectPortal.Controllers
             
             aliveClass.grupp2 = trueorfalse2;
             aliveClass.grupp3 = trueorfalse3;
-           // aliveClass.grupp4 = trueorfalse4;
+           aliveClass.grupp4 = trueorfalse4;
             aliveClass.grupp5 = trueorfalse5;
             
 
