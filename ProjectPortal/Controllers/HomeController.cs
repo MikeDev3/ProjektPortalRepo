@@ -23,6 +23,12 @@ namespace ProjectPortal.Controllers
             bool trueorfalse4 = false;
             bool trueorfalse5 = false;
 
+            aliveClass.grupp1 = trueorfalse1;
+            aliveClass.grupp2 = trueorfalse2;
+            aliveClass.grupp3 = trueorfalse3;
+            aliveClass.grupp4 = trueorfalse4;
+            aliveClass.grupp5 = trueorfalse5;
+
             try
             {
                 trueorfalse1 = grupp1.IsAlive();
@@ -31,11 +37,31 @@ namespace ProjectPortal.Controllers
                 trueorfalse4 = grupp4.IsAlive();
                 trueorfalse5 = grupp5.IsAlive();
 
-                aliveClass.grupp1 = trueorfalse1;     // Här tilldelas alla bool-variabler till objektet "aliveclass" som returneras till vyn
-                aliveClass.grupp2 = trueorfalse2;
-                aliveClass.grupp3 = trueorfalse3;
-                aliveClass.grupp4 = trueorfalse4;
-                aliveClass.grupp5 = trueorfalse5;
+                if (trueorfalse1 == true)
+                {
+                 aliveClass.grupp1 = trueorfalse1;     // Här tilldelas alla bool-variabler till objektet "aliveclass" som returneras till vyn
+
+                }
+                if (trueorfalse2 == true)
+                {
+                    aliveClass.grupp2 = trueorfalse2;     // Här tilldelas alla bool-variabler till objektet "aliveclass" som returneras till vyn
+
+                }
+                if (trueorfalse3 == true)
+                {
+                    aliveClass.grupp3 = trueorfalse3;     // Här tilldelas alla bool-variabler till objektet "aliveclass" som returneras till vyn
+
+                }
+                if (trueorfalse4 == true)
+                {
+                    aliveClass.grupp4 = trueorfalse4;     // Här tilldelas alla bool-variabler till objektet "aliveclass" som returneras till vyn
+
+                }
+                if (trueorfalse5 == true)
+                {
+                    aliveClass.grupp5 = trueorfalse5;     // Här tilldelas alla bool-variabler till objektet "aliveclass" som returneras till vyn
+
+                }
 
                 return View(aliveClass);
             
