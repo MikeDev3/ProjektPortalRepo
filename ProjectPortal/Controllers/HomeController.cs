@@ -31,22 +31,22 @@ namespace ProjectPortal.Controllers
                 trueorfalse4 = grupp4.IsAlive();
                 trueorfalse5 = grupp5.IsAlive();
 
+                aliveClass.grupp1 = trueorfalse1;     // Här tilldelas alla bool-variabler till objektet "aliveclass" som returneras till vyn
+                aliveClass.grupp2 = trueorfalse2;
+                aliveClass.grupp3 = trueorfalse3;
+                aliveClass.grupp4 = trueorfalse4;
+                aliveClass.grupp5 = trueorfalse5;
+
+                return View(aliveClass);
+            
             }
             catch (Exception)
             {
 
-                throw;
+                return View(aliveClass);
             }
 
-            
-            aliveClass.grupp1 = trueorfalse1;     // Här tilldelas alla bool-variabler till objektet "aliveclass" som returneras till vyn
-            aliveClass.grupp2 = trueorfalse2;
-            aliveClass.grupp3 = trueorfalse3;
-            aliveClass.grupp4 = trueorfalse4;
-            aliveClass.grupp5 = trueorfalse5;
 
-            return View(aliveClass);
-            
         }
 
       
