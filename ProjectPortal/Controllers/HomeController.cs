@@ -29,95 +29,59 @@ namespace ProjectPortal.Controllers
             aliveClass.grupp3 = trueorfalse3;
             aliveClass.grupp4 = trueorfalse4;
             aliveClass.grupp5 = trueorfalse5;
-            /*
-            try
-            {
-                trueorfalse1 = grupp1.IsAlive();
-     
-                if (trueorfalse1 == true)
-                {
-                 aliveClass.grupp1 = trueorfalse1;     // Här tilldelas alla bool-variabler till objektet "aliveclass" som returneras till vyn
-
-                }
             
-            }
-            catch (Exception)
-            {
-                throw;
-
-            } */
-
             try
             {
                 trueorfalse2 = grupp2.IsAlive();
-               
-                if (trueorfalse2 == true)
-                {
-                    aliveClass.grupp2 = trueorfalse2;     // Här tilldelas alla bool-variabler till objektet "aliveclass" som returneras till vyn
-
-                }
-
+                aliveClass.grupp2 = trueorfalse2;
             }
             catch (Exception)
             {
-                throw;
-
+                aliveClass.grupp2 = trueorfalse2;
             }
+
             try
             {
-               
+                trueorfalse1 = grupp1.IsAlive();
+                aliveClass.grupp1 = trueorfalse1;
+            }
+            catch (Exception)
+            {
+                aliveClass.grupp1 = trueorfalse1;
+            }
+
+            try
+            {
                 trueorfalse3 = grupp3.IsAlive();
-             
-                if (trueorfalse3 == true)
-                {
-                    aliveClass.grupp3 = trueorfalse3;     // Här tilldelas alla bool-variabler till objektet "aliveclass" som returneras till vyn
-
-                }
-
+                aliveClass.grupp3 = trueorfalse3;
             }
             catch (Exception)
             {
-                throw;
-
+                aliveClass.grupp3 = trueorfalse3;
             }
 
             try
             {
-              
                 trueorfalse4 = grupp4.IsAlive();
-                if (trueorfalse4 == true)
-                {
-                    aliveClass.grupp4 = trueorfalse4;     // Här tilldelas alla bool-variabler till objektet "aliveclass" som returneras till vyn
-
-                }
-
+                aliveClass.grupp4 = trueorfalse4;
             }
             catch (Exception)
             {
-                throw;
-
+                aliveClass.grupp4 = trueorfalse4;
             }
 
             try
             {
-           
                 trueorfalse5 = grupp5.IsAlive();
-
-                if (trueorfalse5 == true)
-                {
-                    aliveClass.grupp5 = trueorfalse5;     // Här tilldelas alla bool-variabler till objektet "aliveclass" som returneras till vyn
-
-                }
-               
+                aliveClass.grupp5 = trueorfalse5;
             }
             catch (Exception)
             {
-                throw;
-
+                aliveClass.grupp5 = trueorfalse5;
             }
-
 
             return View(aliveClass);
+
         }
 
       
