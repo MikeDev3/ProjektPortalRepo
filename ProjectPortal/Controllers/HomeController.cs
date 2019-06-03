@@ -29,7 +29,7 @@ namespace ProjectPortal.Controllers
             aliveClass.grupp3 = trueorfalse3;
             aliveClass.grupp4 = trueorfalse4;
             aliveClass.grupp5 = trueorfalse5;
-
+            /*
             try
             {
                 trueorfalse1 = grupp1.IsAlive();
@@ -45,7 +45,8 @@ namespace ProjectPortal.Controllers
             {
                 throw;
 
-            }
+            } */
+
             try
             {
                 trueorfalse2 = grupp2.IsAlive();
@@ -79,6 +80,7 @@ namespace ProjectPortal.Controllers
                 throw;
 
             }
+
             try
             {
               
